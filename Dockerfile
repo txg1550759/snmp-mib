@@ -5,7 +5,7 @@ RUN cd /root && yum install epel-release -y && yum makecache  && yum install les
     &&  git clone https://github.com/prometheus/snmp_exporter \
     &&  cd snmp_exporter/generator \
     && /usr/bin/go build \
-    &&  make mibs \
-    &&  MIBDIRS=mibs \
-    && ./generator generate
+    &&  make mibs 
+    #&&  MIBDIRS=mibs \
+    #&& ./generator generate
     
