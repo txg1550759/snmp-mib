@@ -1,7 +1,7 @@
 FROM centos:centos7
 MAINTAINER idea77@qq.com
 
-RUN cd /root && yum install epel-release -y && yum makecache  && yum install less zip vim unzip bzip2  p7zip p7zip-plugins git make automake cmake  gcc gcc-g++  net-snmp net-snmp-utils net-snmp-libs net-snmp-devel  golang net-snmp-utils -y \
+RUN cd /root && yum install epel-release -y && yum makecache  && yum install less zip vim unzip bzip2  p7zip p7zip-plugins git make automake cmake  gcc gcc-g++  net-snmp net-snmp-utils net-snmp-libs net-snmp-devel  golang-1.13.6-1.el7.x86_64 net-snmp-utils -y \
     &&  /usr/bin/go get github.com/prometheus/snmp_exporter/generator \
     &&  cd /root/go/src/github.com/prometheus/snmp_exporter/generator \
     && /usr/bin/go build \
